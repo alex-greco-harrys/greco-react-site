@@ -1,24 +1,16 @@
 .about-page {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: cornflowerblue;
 }
 
 .about-container {
-  padding:10px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.left-container {
-  flex-basis:70%;
-  max-width:600px;
-  min-width: 250px;
-  height:auto;
-}
-.right-container {
-  flex-basis: 25%;
-  min-width: 100px;
-  height: auto;
+  flex-direction: column;
+  margin: 15px;
+  border: 1px black solid;
+  border-radius: 5px;
+  background-color: grey;
+  opacity: 1;
+  color: white;
 }

@@ -1,36 +1,37 @@
 import React from "react";
+import Hero from "../components/hero";
+import Logo from "../static/logo.svg";
+import Row from "../components/row";
+import Paragraph from "../components/paragraph";
 import "./styles/about.css";
 
 const AboutPage = () => {
   return (
     <div className="about-page">
+      <Hero imageUrl={Logo} altText="Hero Image" />
       <div className="about-container">
-        <div className="left-container">
-          <p>
-            This is the shorthand for flex-grow, flex-shrink and flex-basis
-            combined. The second and third parameters (flex-shrink and
-            flex-basis) are optional. Default is 0 1 auto.
-          </p>
-          <p>
-            This defines the default size of an element before the remaining
-            space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a
-            keyword. The auto keyword means "look at my width or height
-            property" (which was temporarily done by the main-size keyword until
-            deprecated). The content keyword means "size it based on the item's
-            content" - this keyword isn't well supported yet, so it's hard to
-            test and harder to know what its brethren max-content, min-content,
-            and fit-content do.
-          </p>
-        </div>
-        <div className="right-container">
-          <p>
-            This defines the alignment along the main axis. It helps distribute
-            extra free space left over when either all the flex items on a line
-            are inflexible, or are flexible but have reached their maximum size.
-            It also exerts some control over the alignment of items when they
-            overflow the line.
-          </p>
-        </div>
+        <Row>
+          <Paragraph>
+            In our last example, we had to declare a readonly member name and a
+            constructor parameter theName in the Octopus class, and we then
+            immediately set name to theName. This turns out to be a very common
+            practice. Parameter properties let you create and initialize a
+            member in one place. Here’s a further revision of the previous
+            Octopus class using a parameter property:
+          </Paragraph>
+        </Row>
+        <Row>
+          <Paragraph>
+            Notice how we dropped theName altogether and just use the shortened
+            readonly name: string parameter on the constructor to create and
+            initialize the name member. We’ve consolidated the declarations and
+            assignment into one location. Parameter properties are declared by
+            prefixing a constructor parameter with an accessibility modifier or
+            readonly, or both. Using private for a parameter property declares
+            and initializes a private member; likewise, the same is done for
+            public, protected, and readonly.
+          </Paragraph>
+        </Row>
       </div>
     </div>
   );
